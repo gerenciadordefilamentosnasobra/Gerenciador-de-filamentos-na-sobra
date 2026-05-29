@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Gerenciador de Filamentos
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <!-- TÍTULO -->
+
+            <h2>
+                Filamentos
+            </h2>
+
+            <!-- BOTÕES -->
+
+            <div class="sidebar-buttons">
+
+                <button id="btnHistorico">
+                    Histórico
+                </button>
+
+                <button id="btnConfig">
+                    Configurações
+                </button>
+
+            </div>
+
+            <!-- =========================
+                 FORMULÁRIO NOVO ROLO
+            ========================== -->
+
+            <div class="form-card">
+
+                <h2>
+                    Novo Rolo
+                </h2>
+
+                <!-- NOME -->
+
+                <label for="filamentoNome">
+                    Nome do Filamento
+                </label>
+
+                <input id="filamentoNome" type="text" placeholder="Ex: PLA Preto">
+
+                <!-- COR -->
+
+                <div class="color-picker-container">
+
+                    <span>
+                        Cor do Filamento
+                    </span>
+
+                    <input id="filamentoCor" type="color" value="#00ff88">
+
+                </div>
+
+                <!-- PESO TOTAL -->
+
+                <label for="pesoTotal">
+                    Peso Total do Rolo (g)
+                </label>
+
+                <input id="pesoTotal" type="number" placeholder="Ex: 1230">
+
+                <!-- PESO CARRETEL -->
+
+                <label for="pesoCarretel">
+                    Peso do Carretel Vazio (g)
+                </label>
+
+                <input id="pesoCarretel" type="number" placeholder="Ex: 230">
+
+                <!-- BOTÃO -->
+
+                <button class="save-btn">
+
+                    Calcular Restante
+
+                </button>
+
+                <!-- RESULTADO -->
+
+                <div class="resultado">
+
+                    Restante calculado: 0g
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- =========================
+             ÁREA PRINCIPAL
+        ========================== -->
+
+        <main class="content">
+
+            <!-- TOPO -->
+
+            <header class="topbar">
+
+                <h1>
+                    Gerenciador de Filamentos
+                </h1>
+
+            </header>
+
+            <!-- DASHBOARD -->
+
+            <section class="dashboard">
+
+                <!-- =========================
+                     PROJETO DETECTADO
+                ========================== -->
+
+                <div class="projeto-detectado">
+
+                    <h2>
+                        Projeto Detectado
+                    </h2>
+
+                    <div id="arquivoAtual">
+
+                        Nenhum projeto detectado
+
+                    </div>
+
+                    <div id="pesoProjeto">
+
+                        Peso estimado: 0g
+
+                    </div>
+
+                </div>
+
+                <!-- =========================
+                     LISTA DE ROLOS
+                ========================== -->
+
+                <div class="lista-rolos">
+
+                    <!-- RENDER DINÂMICO -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- =========================
+         HISTÓRICO
+    ========================== -->
+
+    <div class="historico-panel">
+
+        <h2>
+            Histórico de Projetos
+        </h2>
+
+        <div id="historicoLista">
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         SCRIPT
+    ========================== -->
+
+    <script src="renderer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,642 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #1e1e1e;
+
+    color: white;
+
+    overflow: hidden;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app {
+
+    display: flex;
+
+    height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+
+    width: 320px;
+
+    background-color: #2b2b2b;
+
+    border-right: 1px solid #444;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+/* =========================
+   BOTÕES SIDEBAR
+========================= */
+
+.sidebar button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    background-color: #3a3a3a;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.sidebar button:hover {
+
+    background-color: #505050;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.form-card {
+
+    margin-top: 25px;
+
+    background-color: #2f2f2f;
+
+    border: 1px solid #444;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.form-card h2 {
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+}
+
+.form-card label {
+
+    margin-top: 12px;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    color: #dcdcdc;
+}
+
+.form-card input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    border: 1px solid transparent;
+
+    outline: none;
+
+    background-color: #1f1f1f;
+
+    color: white;
+
+    transition: 0.2s;
+}
+
+.form-card input:focus {
+
+    border: 1px solid #00ff88;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 136, 0.25);
+}
+
+/* =========================
+   SELETOR DE COR
+========================= */
+
+.color-picker-container {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.color-picker-container span {
+
+    font-size: 14px;
+
+    color: #dcdcdc;
+}
+
+/* QUADRADO DA COR */
+
+#filamentoCor {
+
+    width: 45px;
+
+    height: 45px;
+
+    padding: 0;
+
+    border: none;
+
+
+
+    cursor: pointer;
+
+    background: none;
+
+    overflow: hidden;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 136, 0.35);
+}
+
+#filamentoCor:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 18px rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   BOTÃO CALCULAR
+========================= */
+
+.save-btn {
+
+    margin-top: 22px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #00ff88;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 0 10px #00ff88,
+        0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.save-btn:hover {
+
+    background: #00ffaa;
+
+    transform: scale(1.02);
+}
+
+/* =========================
+   RESULTADO
+========================= */
+
+.resultado {
+
+    margin-top: 18px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background-color: #1f1f1f;
+
+    border: 1px solid #444;
+
+    font-size: 15px;
+}
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+
+    padding: 20px;
+
+    border-bottom: 1px solid #444;
+
+    background-color: #252525;
+}
+
+.topbar h1 {
+
+    font-size: 26px;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+/* =========================
+   PROJETO DETECTADO
+========================= */
+
+.projeto-detectado {
+
+    width: 100%;
+
+    min-height: 120px;
+
+    background-color: #2a2a2a;
+
+    border: 1px solid #444;
+
+    border-radius: 14px;
+
+    padding: 22px;
+}
+
+.projeto-detectado h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 16px;
+}
+
+#arquivoAtual {
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    word-break: break-word;
+}
+
+#pesoProjeto {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: #00ff88;
+
+    text-shadow:
+        0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* =========================
+   LISTA DE ROLOS
+========================= */
+
+.lista-rolos {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    align-items: flex-start;
+
+    align-content: flex-start;
+
+    padding-bottom: 30px;
+}
+
+/* =========================
+   ROLO
+========================= */
+
+.rolo-item {
+
+    position: relative;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: visible;
+
+    transition: 0.3s ease;
+
+    flex-shrink: 0;
+
+    border: 4px solid var(--cor-rolo, #00ff88);
+
+    background:
+        radial-gradient(circle at center,
+            #2d2d2d 0%,
+            #1b1b1b 45%,
+            #101010 70%,
+            #050505 100%);
+
+    box-shadow:
+        0 0 10px var(--cor-rolo, #00ff88),
+        0 0 25px var(--cor-rolo, #00ff88),
+        inset 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* CENTRO */
+
+.rolo-item::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+    background:
+        repeating-radial-gradient(circle,
+            #111 0px,
+            #111 8px,
+            #1b1b1b 10px,
+            #000 18px);
+
+    border: 3px solid var(--cor-rolo, #00ff88);
+
+    box-shadow:
+        inset 0 0 10px rgba(255, 255, 255, 0.15),
+        0 0 10px var(--cor-rolo, #00ff88);
+}
+
+/* FURO CENTRAL */
+
+.rolo-item::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+    background: var(--cor-rolo, #00ff88);
+
+    box-shadow:
+        0 0 10px var(--cor-rolo, #00ff88),
+        0 0 20px var(--cor-rolo, #00ff88);
+}
+
+/* TEXOS */
+
+.rolo-item strong {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.rolo-item span {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* HOVER */
+
+.rolo-item:hover {
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 20px var(--cor-rolo, #00ff88),
+        0 0 45px var(--cor-rolo, #00ff88),
+        inset 0 0 20px rgba(255, 255, 255, 0.08);
+}
+
+/* ROLO ATIVO */
+
+.rolo-item.ativo {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px #ffffff,
+        0 0 40px var(--cor-rolo, #00ff88),
+        0 0 70px var(--cor-rolo, #00ff88),
+        inset 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   BOTÃO EXCLUIR
+========================= */
+
+.delete-btn {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 26px;
+
+    height: 26px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff0033;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 0 10px #ff0033;
+}
+
+.delete-btn:hover {
+
+    transform: scale(1.1);
+
+    background: #ff3355;
+}
+
+/* =========================
+   HISTÓRICO
+========================= */
+
+.historico-panel {
+
+    display: none;
+
+    position: fixed;
+
+    top: 90px;
+
+    left: 340px;
+
+    width: 420px;
+
+    max-height: 500px;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #1f1f1f;
+
+    border: 1px solid #333;
+
+    z-index: 999;
+
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.historico-panel h2 {
+
+    margin-bottom: 20px;
+}
+
+.historico-item {
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    background: #2a2a2a;
+
+    border-bottom: 1px solid #333;
+
+    word-break: break-word;
+}

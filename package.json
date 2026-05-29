@@ -1,0 +1,33 @@
+{
+  "name": "gerenciador-filamentos",
+  "version": "1.0.0",
+  "description": "Gerenciador de Filamentos",
+  "author": "Jose Carlos",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.filamentos.app",
+    "productName": "Gerenciador de Filamentos",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "icone.ico"
+    }
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "chokidar": "^4.0.3"
+  },
+  "devDependencies": {
+    "electron": "^41.7.0",
+    "electron-builder": "^26.0.12"
+  }
+}
