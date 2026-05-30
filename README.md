@@ -33,4 +33,4 @@ Os arquivos .3mf devem ser colocados dentro dessa pasta para o monitoramento fun
 
 ## Autor
 
-Projeto criado por José Carlos.
+Projeto criado por José Carlos de Oliveira Gusmão. 29/05/2026
