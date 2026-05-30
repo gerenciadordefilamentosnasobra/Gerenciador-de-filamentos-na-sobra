@@ -1,125 +1,37 @@
-# Gerenciador-de-filamentos-na-sobra
-Gerenciador de filamentos, que calcula a quantidade em gramas restante no carretel de 1 kilo
 # Gerenciador de Filamentos na Sobra
-![Screenshot do software](screenshot.png)
-Software desktop desenvolvido em Electron para ajudar usuários de impressão 3D a controlar automaticamente a quantidade restante de filamento em rolos parcialmente usados.
 
-## Objetivo
+![Screenshot](screenshot.png)
 
-O projeto foi criado para resolver um problema comum no uso do Bambu Studio:
+Gerenciador de filamentos para impressão 3D focado em sobras de carretel de 1kg.
 
-* saber exatamente quantos gramas ainda restam em um rolo;
-* evitar iniciar impressões sem filamento suficiente;
-* acompanhar automaticamente o consumo real dos projetos `.3mf`.
-
-O software monitora uma pasta local e lê automaticamente o peso estimado do filamento diretamente do G-code contido nos arquivos `.3mf`.
-
----
+O software monitora automaticamente arquivos .3mf exportados do Bambu Studio e desconta o peso estimado do filamento selecionado.
 
 ## Recursos
 
-* Cadastro manual de rolos de filamento;
-* Controle do peso restante;
-* Seleção de rolo ativo;
-* Histórico automático de arquivos `.3mf`;
-* Leitura automática do peso de filamento do projeto;
-* Atualização automática do restante do rolo;
-* Alertas de:
+- Controle de filamento restante em gramas
+- Seleção de múltiplos rolos
+- Histórico de projetos monitorados
+- Avisos automáticos de 20% e 10% de capacidade
+- Avisos sonoros por voz
+- Executável portátil
 
-  * filamento insuficiente;
-  * abaixo de 20%;
-  * abaixo de 10%;
-  * rolo vazio;
-* Avisos sonoros por voz;
-* Interface neon estilizada;
-* Funcionamento offline.
+## Download
 
----
+Baixe a versão mais recente em:
 
-## Tecnologias utilizadas
+Releases → Gerenciador de Filamentos 1.0.0
 
-* Electron
-* JavaScript
-* Node.js
-* Chokidar
-* Adm-Zip
+## Importante
 
----
+Antes de abrir o software, crie manualmente a pasta:
 
-## Como funciona
-
-O software monitora a pasta:
-
-```txt
 C:/teste-bambu
-```
 
-Quando um arquivo `.3mf` é adicionado:
+Os arquivos .3mf devem ser colocados dentro dessa pasta para o monitoramento funcionar corretamente.
 
-1. o programa abre o arquivo;
-2. encontra o G-code interno;
-3. lê o peso estimado do filamento;
-4. desconta automaticamente do rolo selecionado.
+## Autor
 
----
-
-## Instalação
-
-### Clonar o projeto
-
-```bash
-git clone https://github.com/SEU-USUARIO/Gerenciador-de-filamentos-na-sobra.git
-```
-
-### Instalar dependências
-
-```bash
-npm install
-```
-
-### Rodar em modo desenvolvimento
-
-```bash
-npm start
-```
-
-### Gerar executável
-
-```bash
-npm run build
-```
-
----
-
-## Estrutura necessária
-
-Criar manualmente a pasta:
-
-```txt
-C:/teste-bambu
-```
-
-O programa monitora automaticamente essa pasta.
-
----
-
-## Observações
-
-Este projeto é independente e não possui vínculo oficial com a Bambu Lab.
-
-Foi criado apenas como ferramenta auxiliar para usuários de impressão 3D.
-
----
-
-## Futuras melhorias
-
-* Integração direta com Bambu Studio;
-* Suporte multicolor AMS;
-* Controle individual por cor/material;
-* Dashboard de consumo;
-* Estatísticas por projeto;
-* Backup automático;
-* Integração com banco de dados.
+Desenvolvido por Jose Carlos.
 
 ---
 
