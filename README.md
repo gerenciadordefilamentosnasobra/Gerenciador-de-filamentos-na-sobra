@@ -29,10 +29,6 @@ C:/teste-bambu
 
 Os arquivos .3mf devem ser colocados dentro dessa pasta para o monitoramento funcionar corretamente.
 
-## Autor
-
-Desenvolvido por Jose Carlos.
-
 ---
 
 ## Autor
